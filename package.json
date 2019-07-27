@@ -43,17 +43,18 @@
     "q": "^1.5.1",
     "request": "^2.88.0",
     "swagger-ui-express": "^4.0.7",
-    "ussd-menu-builder": "^1.1.1"
-  },
-  "devDependencies": {
-    "cookie-parser": "^1.4.4",
-    "cors": "^2.8.5",
-    "cross-env": "^5.2.0",
-    "morgan": "^1.9.1",
+    "ussd-menu-builder": "^1.1.1",
     "typescript": "^3.5.3",
     "grunt": "^1.0.4",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-ts": "^6.0.0-beta.22"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "morgan": "^1.9.1"
+    
   }
 }
