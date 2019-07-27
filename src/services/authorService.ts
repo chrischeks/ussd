@@ -99,7 +99,7 @@ export class AuthorService extends BaseService {
             }
 
             let foundAuthor= null;
-            await req.app.locals.author.findOne({ _id: req.params.id }).then(result => {
+            await req.app.locals.author.findByIdAndUpdate(req.params.id, {name, books, phone, age, address}, { new: true, useFindAndModify: false }).then(result => {
                     if (result) {
                         foundAuthor = result
                        
