@@ -1,5 +1,5 @@
 import * as bodyParser from "body-parser";
-import * as cookieParser from "cookie-parser";
+// import * as cookieParser from "cookie-parser";
 import * as express from "express";
 import * as logger from "morgan";
 import * as path from "path";
@@ -99,7 +99,7 @@ export class Server {
     }));
 
     //mount cookie parser
-    this.app.use(cookieParser(process.env.SECRET_KEY));
+    // this.app.use(cookieParser(process.env.SECRET_KEY));
 
     //mount override
     this.app.use(methodOverride());
