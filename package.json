@@ -45,15 +45,16 @@
     "swagger-ui-express": "^4.0.7",
     "morgan": "^1.9.1",
     "cors": "^2.8.5",
-    "ussd-menu-builder": "^1.1.1"
-  },
-  "devDependencies": {
-    "cookie-parser": "^1.4.4",
-    "cross-env": "^5.2.0",
     "grunt": "^1.0.4",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-ts": "^6.0.0-beta.22",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "ussd-menu-builder": "^1.1.1"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.4",
+    "cross-env": "^5.2.0"
+    
   }
 }
