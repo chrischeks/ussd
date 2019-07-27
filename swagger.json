@@ -1,0 +1,113 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "API documentation for node ussd backend service",
+      "version": "1.0.0",
+      "title": "Node ussd API",
+      "termsOfService": "http://dev.quabbly.com/terms/",
+      "contact": {
+        "email": "chekwubeudeogu@.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      }
+    },
+    "host": "node_ussd.heroku.com",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/v1/author/create": {
+        "post": {
+          "tags": [
+            "Create Author"
+          ],
+          "summary": "Add a new author",
+          "description": "",
+          "operationId": "createAuthor",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Create Author",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/createAuthorSchema"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "CREATED",
+              "schema": {
+                "$ref": "#/definitions/createAuthorSucces"
+              }
+            },
+            "400": {
+              "description": "FAILED_VALIDATION"
+            },
+            "500": {
+              "description": "ERROR"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "createAuthorSucces": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "CREATED"
+          },
+          "secret": {
+            "type": "object",
+            "example": {
+              "fileName": "45095172059de6423ed8add26550c7f0-1551273989795",
+              "originalFileName": "1.gif",
+              "fileExtension": "image/gif",
+              "fileSize": 41771,
+              "sharing": []
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "example": "2019-01-13T23:33:21.586Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "example": "2019-01-13T23:33:21.586Z"
+          },
+          "_id": {
+            "type": "string",
+            "example": "5c3bcfc1eb99dd0010d335fe"
+          }
+        }
+      },
+      "createAuthorSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "SUCCESS"
+          },
+          "createdAt": {
+            "type": "string",
+            "example": "2019-01-13T23:33:21.586Z"
+          },
+          "_id": {
+            "type": "string",
+            "example": "5c3bcfc1eb99dd0010d335fe"
+          }
+        }
+      }
+    }
+  }
