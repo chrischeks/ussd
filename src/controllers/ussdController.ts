@@ -23,7 +23,7 @@ export class UssdController {
 
   public ussdMenuRoute(prefix: String, router: Router): any {
 
-    router.post(prefix + "/", (req, res: Response, next: NextFunction) => {
+    router.post(prefix , (req, res: Response, next: NextFunction) => {
       new ussdMenuService().ussdMenu(req, res, next);
     })
   }

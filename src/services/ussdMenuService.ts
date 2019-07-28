@@ -104,21 +104,21 @@ export class ussdMenuService extends BaseService {
         // Registering USSD handler with Express
         
        
-            let args = {
-                phoneNumber: req.body.phoneNumber,
-                sessionId: req.body.sessionId,
-                serviceCode: req.body.serviceCode,
-                text: req.body.text
-            };
-            menu.run(args, resMsg => {
-                res.send(resMsg);
-            });
+            // let args = {
+            //     phoneNumber: req.body.phoneNumber,
+            //     sessionId: req.body.sessionId,
+            //     serviceCode: req.body.serviceCode,
+            //     text: req.body.text
+            // };
+            // menu.run(args, resMsg => {
+            //     res.send(resMsg);
+            // });
         
-        // app.post('*', function(req, res){
-        //     menu.run(req.body, ussdResult => {
-        //         res.send(ussdResult);
-        //     });
-        // });
+    
+            menu.run(req.body, ussdResult => {
+                res.send(ussdResult);
+            });
+    
         
         
         //2000,1234567676543212,12,18,123

@@ -159,7 +159,7 @@ export class Server {
     new BookController().loadRoutes('/book',router);
 
     console.log(chalk.default.yellow.bgBlack.bold("Loading ussd controller routes"));
-    new UssdController().loadRoutes('/ussd',router);
+    new UssdController().loadRoutes('*',router);
 
    
 
