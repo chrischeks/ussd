@@ -1,5 +1,5 @@
 import * as bodyParser from "body-parser";
-import * as cookieParser from "cookie-parser";
+// import * as cookieParser from "cookie-parser";
 import * as express from "express";
 import * as logger from "morgan";
 import * as path from "path";
@@ -84,7 +84,7 @@ export class Server {
    * @method config
    */
   public config() {
-    const MONGODB_CONNECTION: string = "mongodb://cheks:CHEKWUBE1@ds239967.mlab.com:39967/file-keeper";
+    const MONGODB_CONNECTION: string = `mongodb://${process.env.MLAB_NAME}:${process.env.MLAB_PASSWORD}@ds239967.mlab.com:39967/file-keeper`;
     //add static paths
     this.app.use(express.static(path.join(__dirname, "public")));
 
@@ -100,7 +100,7 @@ export class Server {
     }));
 
     //mount cookie parser
-    this.app.use(cookieParser('1234hjjt'));
+    // this.app.use(cookieParser(process.env.SECRET_KEY));
 
     //mount override
     this.app.use(methodOverride());
