@@ -1,5 +1,5 @@
 {
-  "name": "node-ussd",
+  "name": "ussd",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -31,6 +31,7 @@
     "chalk": "^2.4.2",
     "class-validator": "^0.9.1",
     "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "debug": "^2.6.9",
     "dotenv": "^8.0.0",
@@ -53,7 +54,6 @@
     "ussd-menu-builder": "^1.1.1"
   },
   "devDependencies": {
-    "cookie-parser": "^1.4.4",
     "cross-env": "^5.2.0"
   }
 }

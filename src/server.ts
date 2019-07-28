@@ -1,5 +1,5 @@
 import * as bodyParser from "body-parser";
-// import * as cookieParser from "cookie-parser";
+import * as cookieParser from "cookie-parser";
 import * as express from "express";
 import * as logger from "morgan";
 import * as path from "path";
@@ -17,6 +17,8 @@ dotenv.config();
 
 //routes
 import { AuthorController } from "./controllers/authorController";
+import { BookController } from './controllers/bookController';
+import { UssdController } from './controllers/ussdController';
 
 
 //interfaces
@@ -24,16 +26,15 @@ import { AuthorController } from "./controllers/authorController";
 
 //models
 import { IAuthorModel } from './models/authorModel';
+import { IBookModel } from './models/bookModel';
 
 //schemas
 import { AuthorSchema } from './schemas/authorSchema';
+import { BookSchema } from './schemas/bookSchema';
 
 import chalk = require('chalk');
 import { info } from "console";
-import { IBookModel } from './models/bookModel';
-import { BookSchema } from './schemas/bookSchema';
-import { BookController } from './controllers/bookController';
-import { UssdController } from './controllers/ussdController';
+
 
 /**
  * The server.
@@ -83,7 +84,7 @@ export class Server {
    * @method config
    */
   public config() {
-    const MONGODB_CONNECTION: string = `mongodb://${process.env.MLAB_NAME}:${process.env.MLAB_PASSWORD}@ds239967.mlab.com:39967/file-keeper`;
+    const MONGODB_CONNECTION: string = "mongodb://cheks:CHEKWUBE1@ds239967.mlab.com:39967/file-keeper";
     //add static paths
     this.app.use(express.static(path.join(__dirname, "public")));
 
@@ -99,7 +100,7 @@ export class Server {
     }));
 
     //mount cookie parser
-    // this.app.use(cookieParser(process.env.SECRET_KEY));
+    this.app.use(cookieParser('1234hjjt'));
 
     //mount override
     this.app.use(methodOverride());
