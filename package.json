@@ -36,7 +36,7 @@
     "debug": "^2.6.9",
     "dotenv": "^8.0.0",
     "errorhandler": "^1.5.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "grunt": "^1.0.4",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
